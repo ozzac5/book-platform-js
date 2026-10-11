@@ -1,0 +1,31 @@
+<!--
+  ══════════════════════════════════════════════════════════════
+  صفحة الحساب — Blogger Static Page content (/p/account.html)
+  ══════════════════════════════════════════════════════════════
+
+  HOW TO USE (see the Arabic guide for the full walkthrough) :
+
+  1. Blogger dashboard → Pages (صفحات) → New page (صفحة جديدة).
+  2. Title  : الحساب
+  3. The final URL must be :  /p/account.html
+     (if Blogger gives you /p/حساب.html or anything else, publish first,
+      then rename the permalink from the page settings on the right).
+  4. Switch the editor to HTML view (قلم HTML) and paste EXACTLY this :
+
+      <div id="bk-account-app"></div>
+
+  5. Options on the right : Reader comments = Don't allow.
+  6. Publish (نشر).
+
+  The auth.js module detects #bk-account-app and renders the complete
+  tabbed interface (تسجيل الدخول / حساب جديد / نسيت كلمة المرور /
+  تسجيل الخروج) inside this container. Nothing else is needed here.
+
+  NOTES
+  - The page works even BEFORE Firebase is configured : it will show a
+    clear Arabic message explaining that the account system is not
+    enabled yet.
+  - After login the visitor is sent back to where he came from thanks
+    to the ?redirect= parameter added automatically by the template.
+-->
+<div id="bk-account-app"></div>
